@@ -1,48 +1,66 @@
+var itemList = document.querySelector('#items');
+// Parent Node
+// console.log(itemList.parentNode);
+// itemList.parentNode.style.backgroundColor='red';
+// ParentElement 
+// console.log(itemList.parentElement);
+// itemList.parentElement.style.backgroundColor='yellow';
 
-// var listGroup= document.getElementsByClassName('list-group-item');
-// console.log(listGroup);
-// listGroup[2].style.backgroundColor='green';
-// for(var i=0; i<listGroup.length; i++){
-//     listGroup[i].style.fontWeight= 'bold';
-// }
+// ChildNode
+// console.log(itemList.childNodes);
 
-// var li= document.getElementsByTagName('li');
-// console.log(li);
-// li[2].style.backgroundColor='green';
-// for(var i=0; i<li.length; i++){
-//     li[i].style.fontWeight= 'bold';
-// }
+// ChildrenNode
+// console.log(itemList.children);
+// console.log(itemList.children[1]);
+// itemList.children[1].style.backgroundColor='red';
 
-// USING QUERYSELECTOR//
-// var secondItems= document.querySelector
-// ('.list-group-item:nth-child(2)');
-// secondItems.style.backgroundColor='green';
-// console.log(secondItems);
+// first child 
+// console.log(itemList.firstChild);
 
-// var thridItems= document.querySelector
-// ('.list-group-item:nth-child(3)');
-// thridItems.style.visibility='hidden';
-// console.log(thridItems);
+// // first element child
+// console.log(itemList.firstElementChild);
+// itemList.firstElementChild.textContent='Hello 1';
 
-// USING QUERYSELECTORALL//
+// Last element child
+console.log(itemList.lastElementChild);
+itemList.lastElementChild.textContent='Hello 4';
 
- var Items= document.querySelectorAll('.list-group-item');
- Items[1].style.color = "green";
- console.log(Items);
+// // next sibling 
+// console.log(itemList.nextSibling);
+// itemList.nextSibling.textContent='Hello 4';
 
- var odd= document.querySelectorAll
- ('li:nth-child(odd)');
- var even= document.querySelectorAll
- ('li:nth-child(even)');
- for(var i=0; i<odd.length; i++){
-    odd[i].style.backgroundColor='green';
-    even[i].style.backgroundColor='red';
- }
+// previous sibling 
+// console.log(itemList.previousSibling);
+//  itemList.previousSibling.textContent='Hello 2';
 
- //console.log(odd);
+// previous Element sibling 
+//  console.log(itemList.previousElementSibling);
+//   itemList.previousElementSibling.style.color='red';
 
+// create Element 
+// create a div 
 
+var newDiv= document.createElement('div');
+// add class
+newDiv.className='hello';
 
-   
+// add id
+newDiv.id= 'hello1';
 
-   
+// add attribute
+
+newDiv.setAttribute('title', 'Hello Div');
+
+// create text node 
+var newdivText= document.createTextNode('Hello World');
+
+// add text to div 
+
+newDiv.appendChild(newdivText);
+var container= document.querySelector('header .container');
+var h1= document.querySelector('header  h1');
+// var ul= document.querySelector('header ul');
+console.log(newDiv);
+newDiv.style.fontSize='40px';
+// container.insertBefore(newDiv, ul);
+container.insertBefore(newDiv, h1);
